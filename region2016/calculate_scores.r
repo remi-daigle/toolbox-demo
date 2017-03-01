@@ -12,7 +12,7 @@
 ## in functions.R is a good workflow.
 
 ## run the configure_toolbox.r script to check configuration
-source('~/github/toolbox-demo/region2016/configure_toolbox.r')
+source('region2016/configure_toolbox.r')
 
 ## calculate scenario scores
 scores = ohicore::CalculateAll(conf, layers)

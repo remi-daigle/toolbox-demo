@@ -16,7 +16,7 @@ if (!"ohicore" %in% (.packages())) {
 }
 
 ## set working directory to the scenario that contains conf and layers directories
-setwd('~/github/toolbox-demo/region2016')
+setwd('region2016')
 
 ## load scenario configuration
 ## 'conf' link all the data layers (for goal, pressures, resilience), goal functions, and other OHI parameters that determines how ohi scores

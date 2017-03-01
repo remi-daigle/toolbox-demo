@@ -6,7 +6,7 @@
 
 ## setup: libraries, file paths ----
 library(tidyverse) # install.packages('tidyverse')
-dir_layers <- file.path('~/github/toolbox-demo/region2016/layers')
+dir_layers <- file.path('layers')
 
 
 ## import dummy 'local data' that is already formatted nicely. Note the naming convention of the data file: it is "goalcode_layername_assessmentYEAR.csv".
