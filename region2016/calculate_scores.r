@@ -15,6 +15,7 @@
 source('region2016/configure_toolbox.r')
 
 ## calculate scenario scores
+setwd('region2016/')
 scores = ohicore::CalculateAll(conf, layers)
 
 ## save scores as scores.csv

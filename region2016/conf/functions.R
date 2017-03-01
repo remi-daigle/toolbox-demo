@@ -350,6 +350,9 @@ AO = function(layers,
 
   d2 <- SelectLayersData(layers, layers = 'ao_need', narrow=TRUE) %>%
     select(region_id = id_num, year, need = val_num)
+  d3 <- SelectLayersData(layers, layers = 'ao_poverty', narrow=TRUE) %>%
+    select(region_id = id_num, year, poverty = val_num)
+
 
   ## join data layers into single data frame (see RStudio cheatsheets)
   ao_data <- left_join(d1, d2, by="region_id")
@@ -363,7 +366,7 @@ AO = function(layers,
 
   ao_model <- ao_data %>%
     mutate(Du = (1 - need) * (1 - access)) %>%
-    mutate(status = (1 - Du) * sustainability)
+    mutate(status = (1 - Du/2) * sustainability)
   # head(ao_model); summary(ao_model)
 
   ############ STATUS ##############
